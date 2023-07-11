@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/main_search_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/main_img_logo"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/logo"/>
+
+        <EditText
+            android:id="@+id/main_et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_bg"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:drawableEnd="@drawable/ic_search"
+            android:hint="what are you looking for?"/>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_search_logo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintTop_toBottomOf="@id/main_pager_banner">
+
+            <RelativeLayout
+                android:id="@+id/main_top_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/main_search_logo">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/main_btn_shop_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_shape"
+                    android:textColor="@color/white"
+                    android:text="Shop Now"
+                    android:textSize="@dimen/_11ssp"
+                    android:textAllCaps="false"
+                    android:paddingHorizontal="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_70sdp"/>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/main_pager_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:src="@drawable/logo"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="مصنعـــــــــــــك"
+
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="@dimen/_8sdp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="به كل ما يلزمك"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="@dimen/_8sdp"/>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="up to 10% off"
+                    android:textSize="@dimen/_16ssp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/main_btn_shop_now"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/home_bg"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <LinearLayout
+                    android:id="@+id/main_container_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/main_btn_fix"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/home_btn"
+                        android:textColor="@color/white"
+                        android:text="Fix Order"
+                        android:textSize="@dimen/_13ssp"
+                        android:layout_weight="1"
+                        android:textAllCaps="false"
+                        android:layout_marginStart="@dimen/_8sdp"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/main_btn_manufacture"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/home_btn"
+                        android:textColor="@color/white"
+                        android:text="Manufacture order"
+                        android:textSize="@dimen/_13ssp"
+                        android:textAllCaps="false"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_category_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:layout_constraintTop_toBottomOf="@id/main_container_service"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Best Accessories"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    android:background="@drawable/home_text_decore"
+                    android:layout_gravity="center|top"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textColor="@color/blue_bg"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_best_accessories_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Best Deals"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    android:background="@drawable/home_text_decore"
+                    android:layout_gravity="center|top"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textColor="@color/blue_bg"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_best_deals_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Our Professional Traders"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    android:background="@drawable/home_text_decore"
+                    android:layout_gravity="center|top"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textColor="@color/blue_bg"/>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/main_pager_trader_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_margin="@dimen/_10sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Best Seller"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    android:background="@drawable/home_text_decore"
+                    android:layout_gravity="center|top"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textColor="@color/blue_bg"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_best_seller_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_16sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

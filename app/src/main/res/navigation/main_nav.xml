@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.elmohandes.masnaekscreens.screens.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
+        <action
+            android:id="@+id/action_home_to_profile"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_home_to_manufactureRequest"
+            app:destination="@id/manufactureRequestFragment" />
+        <action
+            android:id="@+id/action_home_to_fixRequest"
+            app:destination="@id/fixRequestFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_home_to_productDetails"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.elmohandes.masnaekscreens.screens.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/action_products_to_productDetails"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.elmohandes.masnaekscreens.screens.OrdersFragment"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.elmohandes.masnaekscreens.screens.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/manufactureRequestFragment"
+        android:name="com.elmohandes.masnaekscreens.screens.ManufactureRequestFragment"
+        android:label="fragment_manufacture_request"
+        tools:layout="@layout/fragment_manufacture_request" />
+    <fragment
+        android:id="@+id/fixRequestFragment"
+        android:name="com.elmohandes.masnaekscreens.screens.FixRequestFragment"
+        android:label="fragment_fix_request"
+        tools:layout="@layout/fragment_fix_request" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.elmohandes.masnaekscreens.screens.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.elmohandes.masnaekscreens.screens.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" />
+</navigation>

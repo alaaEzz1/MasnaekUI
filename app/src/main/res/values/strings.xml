@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Masnaek Screens</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="cart_screen_is_the_same_of_old_design_but_with_logo_color">Cart Screen is The same of Old design but with logo color</string>
+    <string name="products">Products</string>
+    <string name="home">Home</string>
+    <string name="orders">Orders</string>
+    <string name="account">Account</string>
+</resources>

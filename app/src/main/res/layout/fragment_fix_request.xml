@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.FixRequestFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_8sdp">
+
+        <TextView
+            android:id="@+id/fix_req_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_bg"
+            android:padding="@dimen/_8sdp"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/white"
+            android:text="Fix Request Screen"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/fix_req_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:background="@drawable/input_shape"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/blue_bg"
+            android:textColorHint="@color/blue_bg"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/fix_req_title"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"/>
+
+        <EditText
+            android:id="@+id/fix_req_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:background="@drawable/input_shape"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/blue_bg"
+            android:textColorHint="@color/blue_bg"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/fix_req_name"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"/>
+
+        <LinearLayout
+            android:id="@+id/fix_req_c1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/fix_req_email">
+
+            <EditText
+                android:id="@+id/fix_req_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Mobile Phone"
+                android:layout_weight="1"
+                android:background="@drawable/input_shape"
+                android:inputType="phone"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/blue_bg"
+                android:textColorHint="@color/blue_bg"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/fix_req_email"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"/>
+
+            <EditText
+                android:id="@+id/fix_req_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:background="@drawable/input_shape"
+                android:layout_weight="1"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/blue_bg"
+                android:textColorHint="@color/blue_bg"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/fix_req_phone"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fix_req_address_upload_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="upload image describe your damages"
+            android:textColor="@color/blue_bg"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintTop_toBottomOf="@id/fix_req_c1"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/fix_req_address_upload_img"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/placeholder"
+            app:layout_constraintTop_toBottomOf="@id/fix_req_address_upload_text"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_8sdp"/>
+
+        <Spinner
+            android:id="@+id/fix_req_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/input_shape"
+            android:layout_margin="@dimen/_8sdp"
+            app:layout_constraintTop_toBottomOf="@id/fix_req_address_upload_img"/>
+
+        <EditText
+            android:id="@+id/fix_req_desc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/input_shape"
+            android:hint="describe the damages"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/blue_bg"
+            android:textColorHint="@color/blue_bg"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            app:layout_constraintTop_toBottomOf="@id/fix_req_spinner"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fix_req_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_shape"
+            android:text="send to the technical"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/fix_req_desc"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_8sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

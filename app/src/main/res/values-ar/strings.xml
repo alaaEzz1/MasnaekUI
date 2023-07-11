@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Masnaek Screens</string>
+    <string name="cart_screen_is_the_same_of_old_design_but_with_logo_color">نفس طريقة التصميم القديم ولكن استبدل اللون درجة الازرق باللي موجودة في اللوجو</string>
+    <string name="products">المنتجات</string>
+    <string name="home">الرئيسية</string>
+    <string name="orders">الطلبات</string>
+    <string name="account">الحساب</string>
+</resources>
