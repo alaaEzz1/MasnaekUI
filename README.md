@@ -8,7 +8,6 @@ MasnaekUI is a mobile app that specializes in all home industries and accessorie
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
